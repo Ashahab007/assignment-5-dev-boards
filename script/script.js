@@ -9,7 +9,7 @@ for (let i = 0; i < card.length; i++) {
   taskCounter.innerText = card.length;
   let totalCounter = document.getElementById("total-counter");
   let convertedTotCounter = parseInt(totalCounter.innerText);
-  //   console.log(convertedTotCounter);
+  console.log(convertedTotCounter);
 
   //   let convertedTaskCounter = parseInt(taskCounter.innerText);
 
@@ -20,13 +20,20 @@ for (let i = 0; i < card.length; i++) {
     alert("Board updated successfully");
     event.target.setAttribute("disabled", false);
 
+    let activityLogMessage = document.getElementById("activity-log-message");
     if (event.target.getAttribute("disabled") === "false") {
       // taskCounter.innerText = convertedTaskCounter - 1;
       taskCounter.innerText -= 1;
+      console.log(typeof taskCounter.innerText);
       convertedTotCounter += 1;
+      totalCounter.innerText = convertedTotCounter;
+      console.log(totalCounter);
+
+      if (taskCounter.innerText === "0") {
+        alert("Congratulations!!! You have completed all the current task");
+      }
       // console.log(convertedTotCounter);
     }
-    totalCounter.innerText = convertedTotCounter;
     //   console.log(event.target.getAttribute("disabled") === "false");
     //   console.log(typeof convertedTaskCounter);
   });
