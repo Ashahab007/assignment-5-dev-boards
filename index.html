@@ -54,7 +54,7 @@
             <div>
               <img src="./assets/checkbox.png" alt="check" />
             </div>
-            <h1 class="text-3xl font-bold">23</h1>
+            <h1 id="total-counter" class="text-3xl font-bold">23</h1>
           </div>
           <div class="flex-none bg-primary p-4 rounded-full">
             <a href="">
@@ -78,7 +78,7 @@
               </div>
               <div>
                 <p class="text-light-color text-sm">Task Assigned</p>
-                <h1 class="text-3xl font-bold">05</h1>
+                <h1 id="task-counter" class="text-3xl font-bold">0</h1>
               </div>
             </div>
             <div
@@ -87,7 +87,7 @@
               <div>
                 <img class="w-14" src="./assets/board.png" alt="" srcset="" />
               </div>
-              <div class="">
+              <div>
                 <p class="text-lg text-white">Discover Something</p>
                 <p class="text-lg text-white">New Today!</p>
               </div>
@@ -110,7 +110,7 @@
         <section class="mt-5">
           <div class="grid grid-cols-3 gap-4">
             <!-- card-1 -->
-            <div class="bg-primary p-7 space-y-5 rounded-lg">
+            <div class="card bg-primary p-7 space-y-5 rounded-lg">
               <p class="text-light-color bg-white p-3 inline-block rounded-lg">
                 ShopEase
               </p>
@@ -130,7 +130,11 @@
                   <p>Deadline</p>
                   <h3>21 March 2025</h3>
                 </div>
-                <div><button class="btn btn-primary">Completed</button></div>
+                <div>
+                  <button id="btn-complete" class="btn btn-primary">
+                    Completed
+                  </button>
+                </div>
               </div>
             </div>
           </div>
