@@ -15,20 +15,19 @@ for (let i = 0; i < card.length; i++) {
 
   //   convertedTaskCounter = card.length;
   //   taskCounter.innerText = convertedTaskCounter;
-  document
-    .getElementById("btn-complete")
-    .addEventListener("click", function (event) {
-      alert("Board updated successfully");
-      event.target.setAttribute("disabled", false);
+  let btnComplete = document.getElementsByClassName("btn-complete")[i];
+  btnComplete.addEventListener("click", function (event) {
+    alert("Board updated successfully");
+    event.target.setAttribute("disabled", false);
 
-      if (event.target.getAttribute("disabled") === "false") {
-        // taskCounter.innerText = convertedTaskCounter - 1;
-        taskCounter.innerText -= 1;
-        convertedTotCounter += 1;
-        // console.log(convertedTotCounter);
-      }
-      totalCounter.innerText = convertedTotCounter;
-      //   console.log(event.target.getAttribute("disabled") === "false");
-      //   console.log(typeof convertedTaskCounter);
-    });
+    if (event.target.getAttribute("disabled") === "false") {
+      // taskCounter.innerText = convertedTaskCounter - 1;
+      taskCounter.innerText -= 1;
+      convertedTotCounter += 1;
+      // console.log(convertedTotCounter);
+    }
+    totalCounter.innerText = convertedTotCounter;
+    //   console.log(event.target.getAttribute("disabled") === "false");
+    //   console.log(typeof convertedTaskCounter);
+  });
 }
