@@ -28,6 +28,10 @@
       .bg-primary {
         background-color: #f4f7ff;
       }
+
+      .text-light-color {
+        color: #00303c;
+      }
     </style>
     <title>DevBoard</title>
   </head>
@@ -63,29 +67,47 @@
     <main class="w-10/12 mx-auto flex gap-7 mt-6">
       <!-- Main body section -->
       <section class="bg-white w-9/12 mx-auto px-6 py-8 rounded-xl">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nesciunt
-        fuga animi ab saepe placeat, molestias magnam delectus deleniti
-        assumenda facere molestiae possimus consequatur, ex modi ducimus,
-        excepturi enim magni necessitatibus sint deserunt provident impedit
-        voluptas ipsam? Aspernatur eos corporis ipsa. Placeat commodi qui
-        quaerat facilis eaque officiis distinctio molestias rerum laboriosam
-        quas. Harum eligendi ipsum sit tempore ducimus aut sed eos atque,
-        similique soluta. Necessitatibus eum quasi enim! Tenetur rerum neque
-        sed. Provident nisi maxime quas sint veniam consequatur voluptatibus
-        incidunt a vitae itaque sit molestias, ratione aspernatur, dolorem et,
-        reprehenderit possimus! Assumenda repellendus sed consectetur minima
-        omnis. Facere nesciunt illo reiciendis quibusdam harum fugit tenetur
-        error excepturi atque numquam, animi nemo? Nobis deleniti blanditiis
-        numquam, ut expedita similique necessitatibus quo accusantium sit
-        obcaecati? Facere, recusandae amet quos numquam consectetur nesciunt
-        nemo impedit culpa perspiciatis qui. Nisi libero nam obcaecati eum. Non
-        iusto sunt adipisci magnam veniam voluptas numquam inventore dolore,
-        eligendi, maiores et. Sequi odio placeat delectus laudantium hic qui
-        nulla, repudiandae enim? Rerum, nulla iste doloribus unde eos temporibus
-        aspernatur. Nostrum excepturi molestias incidunt nulla impedit? Aliquam
-        reprehenderit architecto corporis eligendi repellat dolores ullam
-        quibusdam, maiores aliquid quasi iste eos doloremque facilis quaerat
-        molestiae consequatur culpa laboriosam!
+        <!-- title section -->
+        <section>
+          <div class="grid grid-cols-4 gap-4">
+            <div
+              class="flex gap-3 bg-primary justify-center items-center py-4 px-8 rounded-xl"
+            >
+              <div class="bg-white p-3 rounded-full">
+                <img class="w-5" src="./assets/checkbox.png" alt="" srcset="" />
+              </div>
+              <div>
+                <p class="text-light-color text-sm">Task Assigned</p>
+                <h1 class="text-3xl font-bold">05</h1>
+              </div>
+            </div>
+            <div
+              class="flex gap-3 bg-primary justify-center items-center py-2 px-4 col-span-2 rounded-xl bg-linear-to-br from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]"
+            >
+              <div>
+                <img class="w-14" src="./assets/board.png" alt="" srcset="" />
+              </div>
+              <div class="">
+                <p class="text-lg text-white">Discover Something</p>
+                <p class="text-lg text-white">New Today!</p>
+              </div>
+            </div>
+            <div
+              class="flex gap-3 bg-primary justify-center items-center py-2 px-4 rounded-xl"
+            >
+              <div class="bg-white p-3 rounded-full">
+                <img class="w-5" src="./assets/calender.png" alt="" srcset="" />
+              </div>
+              <div>
+                <p id="title-date" class="text-light-color text-sm">
+                  Task Assigned
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- card Section -->
+        <section></section>
       </section>
 
       <!-- activity log section -->
@@ -104,5 +126,6 @@
         voluptatem suscipit?
       </section>
     </main>
+    <script src="./script/script.js"></script>
   </body>
 </html>
