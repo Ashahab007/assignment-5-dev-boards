@@ -24,8 +24,39 @@
         font-weight: 400;
         font-style: normal;
       }
+
+      .bg-primary {
+        background-color: #f4f7ff;
+      }
     </style>
     <title>DevBoard</title>
   </head>
-  <body></body>
+  <body class="bg-primary font-poppins">
+    <header class="w-10/12 mx-auto">
+      <nav>
+        <div class="navbar bg-base-100 shadow-sm rounded-xl">
+          <div class="flex flex-1 items-center">
+            <div>
+              <img src="./assets/logo.png" alt="" srcset="" />
+            </div>
+            <a> <span>Dev</span><span>Board</span></a>
+          </div>
+          <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Link</a></li>
+              <li>
+                <details>
+                  <summary>Parent</summary>
+                  <ul class="bg-base-100 rounded-t-none p-2">
+                    <li><a>Link 1</a></li>
+                    <li><a>Link 2</a></li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
 </html>
