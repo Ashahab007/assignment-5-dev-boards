@@ -4,11 +4,12 @@ document.getElementById("title-date").innerHTML = titleDate.toDateString();
 
 const card = document.querySelectorAll(".card");
 // console.log(card.length);
+let totalCounter = document.getElementById("total-counter");
+let convertedTotCounter = parseInt(totalCounter.innerText);
+totalCounter.innerText = convertedTotCounter;
 for (let i = 0; i < card.length; i++) {
   let taskCounter = document.getElementById("task-counter");
   taskCounter.innerText = card.length;
-  let totalCounter = document.getElementById("total-counter");
-  let convertedTotCounter = parseInt(totalCounter.innerText);
   console.log(convertedTotCounter);
 
   //   let convertedTaskCounter = parseInt(taskCounter.innerText);
@@ -26,9 +27,9 @@ for (let i = 0; i < card.length; i++) {
       taskCounter.innerText -= 1;
       console.log(typeof taskCounter.innerText);
       convertedTotCounter += 1;
-      totalCounter.innerText = convertedTotCounter;
-      console.log(totalCounter);
+      // console.log(totalCounter);
 
+      totalCounter.innerText = convertedTotCounter;
       if (taskCounter.innerText === "0") {
         alert("Congratulations!!! You have completed all the current task");
       }
