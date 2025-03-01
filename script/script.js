@@ -72,7 +72,11 @@ function logTime() {
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let seconds = date.getSeconds();
-  let time = `${hours} : ${minutes} : ${seconds}`;
+  let ampm = hours >= 12 ? "pm" : "am";
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  let time = `${hours} : ${minutes} : ${seconds} ${ampm}`;
   return time;
 }
 
@@ -80,11 +84,3 @@ function logTime() {
 document.getElementById("btn-discover").addEventListener("click", function () {
   window.location.href = "./blog.html";
 });
-
-// Back to desk button
-
-document
-  .getElementById("btn-backToDesk")
-  .addEventListener("click", function () {
-    window.location.href = "./index.html";
-  });
