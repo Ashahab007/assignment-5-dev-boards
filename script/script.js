@@ -96,9 +96,3 @@ document
     let hsla = `hsla(${h}, ${s}%, ${l}%, ${a})`;
     document.body.style.backgroundColor = hsla;
   });
-
-let h = 0;
-let s = Math.ceil(Math.random() * 100);
-let l = Math.ceil(Math.random() * 100);
-let a = Math.random();
-console.log(`hsla(${h} ${s}% ${l}% ${a})`);
