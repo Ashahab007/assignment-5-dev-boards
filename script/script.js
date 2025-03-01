@@ -84,3 +84,21 @@ function logTime() {
 document.getElementById("btn-discover").addEventListener("click", function () {
   window.location.href = "./blog.html";
 });
+
+// Random color button
+document
+  .getElementById("bg-random-color")
+  .addEventListener("click", function () {
+    let h = 0;
+    let s = Math.ceil(Math.random() * 100);
+    let l = Math.ceil(Math.random() * 100);
+    let a = Math.random();
+    let hsla = `hsla(${h}, ${s}%, ${l}%, ${a})`;
+    document.body.style.backgroundColor = hsla;
+  });
+
+let h = 0;
+let s = Math.ceil(Math.random() * 100);
+let l = Math.ceil(Math.random() * 100);
+let a = Math.random();
+console.log(`hsla(${h} ${s}% ${l}% ${a})`);
