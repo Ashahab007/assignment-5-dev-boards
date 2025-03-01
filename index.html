@@ -35,7 +35,7 @@
     </style>
     <title>DevBoard</title>
   </head>
-  <body class="bg-primary font-poppins">
+  <body class="bg-primary font-poppins py-10">
     <header class="w-10/12 mx-auto">
       <nav>
         <div
@@ -82,7 +82,8 @@
               </div>
             </div>
             <div
-              class="flex gap-3 bg-primary justify-center items-center py-2 px-4 col-span-2 rounded-xl bg-linear-to-br from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]"
+              id="btn-discover"
+              class="flex gap-3 bg-primary justify-center items-center py-2 px-4 col-span-2 rounded-xl bg-linear-to-br from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] cursor-pointer"
             >
               <div>
                 <img class="w-14" src="./assets/board.png" alt="" srcset="" />
@@ -110,7 +111,7 @@
         <section class="mt-5">
           <div class="grid grid-cols-3 gap-4">
             <!-- card-1 -->
-            <div class="card bg-primary p-7 space-y-5 rounded-lg">
+            <div class="card bg-primary p-7 space-y-5 rounded-lg inline-block">
               <p class="text-light-color bg-white p-3 inline-block rounded-lg">
                 ShopEase
               </p>
@@ -128,7 +129,7 @@
               <div class="flex items-center justify-between">
                 <div>
                   <p>Deadline</p>
-                  <h3>21 March 2025</h3>
+                  <h5>21 March 2025</h5>
                 </div>
                 <div>
                   <button class="btn btn-primary btn-complete">
@@ -138,25 +139,25 @@
               </div>
             </div>
             <!-- card 2 -->
-            <div class="card bg-primary p-7 space-y-5 rounded-lg">
+            <div class="card bg-primary p-7 space-y-5 rounded-lg inline-block">
               <p class="text-light-color bg-white p-3 inline-block rounded-lg">
-                ShopEase
+                CloudSync
               </p>
 
-              <h3 class="text-2xl font-semibold">Fix Mobile Button Issue</h3>
+              <h3 class="text-2xl font-semibold">Add Dark Mode</h3>
               <div>
                 <p
                   class="text-light-color bg-white p-3 inline-block rounded-lg"
                 >
-                  Debug using Chrome DevTools, check for overlapping elements,
-                  and ensure onClick works properly
+                  Store the user's preference in localStorage, update CSS
+                  variables dynamically, and apply a smooth transition effect.
                 </p>
               </div>
               <hr class="border border-dashed border-[#3751fd17]" />
               <div class="flex items-center justify-between">
                 <div>
                   <p>Deadline</p>
-                  <h3>21 March 2025</h3>
+                  <h5>21 March 2025</h5>
                 </div>
                 <div>
                   <button class="btn btn-primary btn-complete">
@@ -166,12 +167,70 @@
               </div>
             </div>
             <!-- card 3 -->
-            <div class="card bg-primary p-7 space-y-5 rounded-lg">
+            <div class="card bg-primary p-7 space-y-5 rounded-lg inline-block">
               <p class="text-light-color bg-white p-3 inline-block rounded-lg">
-                ShopEase
+                SwiftPay
               </p>
 
-              <h3 class="text-2xl font-semibold">Fix Mobile Button Issue</h3>
+              <h3 class="text-2xl font-semibold">Optimize Home page </h3>
+              <div>
+                <p
+                  class="text-light-color bg-white p-3 inline-block rounded-lg"
+                >
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly and ensure onClick works
+                  properly
+                </p>
+              </div>
+              <hr class="border border-dashed border-[#3751fd17]" />
+              <div class="flex items-center justify-between">
+                <div>
+                  <p>Deadline</p>
+                  <h5>21 March 2025</h5>
+                </div>
+                <div>
+                  <button class="btn btn-primary btn-complete">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 4 -->
+            <div class="card bg-primary p-7 space-y-5 rounded-lg inline-block">
+              <p class="text-light-color bg-white p-3 inline-block rounded-lg">
+                Meta
+              </p>
+
+              <h3 class="text-2xl font-semibold">Add new emoji 🤲</h3>
+              <div>
+                <p
+                  class="text-light-color bg-white p-3 inline-block rounded-lg"
+                >
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly and ensure onClick works
+                  properly
+                </p>
+              </div>
+              <hr class="border border-dashed border-[#3751fd17]" />
+              <div class="flex items-center justify-between">
+                <div>
+                  <p>Deadline</p>
+                  <h5>21 March 2025</h5>
+                </div>
+                <div>
+                  <button class="btn btn-primary btn-complete">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 5 -->
+            <div class="card bg-primary p-7 space-y-5 rounded-lg inline-block">
+              <p class="text-light-color bg-white p-3 inline-block rounded-lg">
+                Google LLC
+              </p>
+
+              <h3 class="text-2xl font-semibold">Integrate OpenAI API</h3>
               <div>
                 <p
                   class="text-light-color bg-white p-3 inline-block rounded-lg"
@@ -184,7 +243,35 @@
               <div class="flex items-center justify-between">
                 <div>
                   <p>Deadline</p>
-                  <h3>21 March 2025</h3>
+                  <h5>21 March 2025</h5>
+                </div>
+                <div>
+                  <button class="btn btn-primary btn-complete">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 6 -->
+            <div class="card bg-primary p-7 space-y-5 rounded-lg inline-block">
+              <p class="text-light-color bg-white p-3 inline-block rounded-lg">
+                Glassdoar
+              </p>
+
+              <h3 class="text-2xl font-semibold">Improve Job searching</h3>
+              <div>
+                <p
+                  class="text-light-color bg-white p-3 inline-block rounded-lg"
+                >
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly
+                </p>
+              </div>
+              <hr class="border border-dashed border-[#3751fd17]" />
+              <div class="flex items-center justify-between">
+                <div>
+                  <p>Deadline</p>
+                  <h5>21 March 2025</h5>
                 </div>
                 <div>
                   <button class="btn btn-primary btn-complete">
@@ -204,7 +291,10 @@
             <img src="./assets/activity.png" alt="" srcset="" />
             <h1 class="font-medium text-xl">Activity Log</h1>
           </div>
-          <button class="btn btn-primary btn-complete mt-3">
+          <button
+            id="btn-clear-history"
+            class="btn btn-primary btn-complete mt-3"
+          >
             Clear History
           </button>
           <div id="activity-log-message"></div>
