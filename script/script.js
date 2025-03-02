@@ -17,15 +17,21 @@ totalCounter.innerText = convertedTotCounter;
 for (let i = 0; i < card.length; i++) {
   let taskCounter = document.getElementById("task-counter");
   taskCounter.innerText = card.length;
-  console.log(convertedTotCounter);
+  // console.log(convertedTotCounter);
 
-  //   let convertedTaskCounter = parseInt(taskCounter.innerText);
-
-  //   convertedTaskCounter = card.length;
-  //   taskCounter.innerText = convertedTaskCounter;
   let btnComplete = document.getElementsByClassName("btn-complete")[i];
   btnComplete.addEventListener("click", function (event) {
-    console.log(event.target.querySelector(".card"));
+    // console.log(event.target.querySelector(".card"));
+
+    /* console.log(
+      event.target.parentNode.parentNode.parentNode.querySelector("h3")
+        .innerText
+    ); */
+
+    let captureTitle =
+      event.target.parentNode.parentNode.parentNode.querySelector(
+        "h3"
+      ).innerText;
 
     alert("Board updated successfully");
     event.target.setAttribute("disabled", false);
@@ -36,19 +42,17 @@ for (let i = 0; i < card.length; i++) {
     p.classList.add("p-2");
     p.classList.add("mt-3");
     p.innerHTML = `
-    You have Complete The Task at ${logTime()}
+    You have Complete The Task ${captureTitle} at ${logTime()}
     `;
-    // let history = event.target;
-    // console.log(history);
-    // console.log(activityLogMessage);
 
     if (event.target.getAttribute("disabled") === "false") {
       // taskCounter.innerText = convertedTaskCounter - 1;
       taskCounter.innerText -= 1;
-      console.log(typeof taskCounter.innerText);
+      // console.log(typeof taskCounter.innerText);
       convertedTotCounter += 1;
       totalCounter.innerText = convertedTotCounter;
       activityLogMessage.appendChild(p);
+
       if (taskCounter.innerText === "0") {
         alert("Congratulations!!! You have completed all the current task");
       }
