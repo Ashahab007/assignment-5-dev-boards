@@ -1,4 +1,3 @@
-// Date in title
 let titleDate = new Date();
 document.getElementById("title-date").innerHTML = titleDate.toDateString();
 
@@ -28,6 +27,7 @@ for (let i = 0; i < card.length; i++) {
     p.classList.add("bg-primary");
     p.classList.add("p-2");
     p.classList.add("mt-3");
+    p.classList.add("rounded-lg");
     p.innerHTML = `
     You have Complete The Task ${captureTitle} at ${logTime()}
     `;
@@ -45,14 +45,12 @@ for (let i = 0; i < card.length; i++) {
   });
 }
 
-// clear history button
 document
   .getElementById("btn-clear-history")
   .addEventListener("click", function () {
     document.getElementById("activity-log-message").innerHTML = "";
   });
 
-// activity log time
 function logTime() {
   let date = new Date();
   let hours = date.getHours();
@@ -66,12 +64,10 @@ function logTime() {
   return time;
 }
 
-// discover button
 document.getElementById("btn-discover").addEventListener("click", function () {
   window.location.href = "./blog.html";
 });
 
-// Random color button
 document
   .getElementById("btn-random-color")
   .addEventListener("click", function () {
