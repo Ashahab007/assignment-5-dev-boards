@@ -2,10 +2,12 @@
 let titleDate = new Date();
 document.getElementById("title-date").innerHTML = titleDate.toDateString();
 
-const card = document.querySelectorAll(".card");
 let totalCounter = document.getElementById("total-counter");
 let convertedTotCounter = parseInt(totalCounter.innerText);
 totalCounter.innerText = convertedTotCounter;
+
+const card = document.querySelectorAll(".card");
+
 for (let i = 0; i < card.length; i++) {
   let taskCounter = document.getElementById("task-counter");
   taskCounter.innerText = card.length;
@@ -18,6 +20,7 @@ for (let i = 0; i < card.length; i++) {
       ).innerText;
 
     alert("Board updated successfully");
+
     event.target.setAttribute("disabled", false);
 
     let activityLogMessage = document.getElementById("activity-log-message");
@@ -70,7 +73,7 @@ document.getElementById("btn-discover").addEventListener("click", function () {
 
 // Random color button
 document
-  .getElementById("bg-random-color")
+  .getElementById("btn-random-color")
   .addEventListener("click", function () {
     let h = 0;
     let s = Math.ceil(Math.random() * 100);
@@ -79,5 +82,3 @@ document
     let hsla = `hsla(${h}, ${s}%, ${l}%, ${a})`;
     document.body.style.backgroundColor = hsla;
   });
-
-console.log(10 % 12);
