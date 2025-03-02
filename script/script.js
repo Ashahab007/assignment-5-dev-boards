@@ -2,32 +2,16 @@
 let titleDate = new Date();
 document.getElementById("title-date").innerHTML = titleDate.toDateString();
 
-// acivitylog function
-/* function acivitylogFunction() {
-  let history = document.querySelectorAll(".card h3")[0].innerText;
-  return history;
-}
-alert(acivitylogFunction()); */
-
 const card = document.querySelectorAll(".card");
-// console.log(card.length);
 let totalCounter = document.getElementById("total-counter");
 let convertedTotCounter = parseInt(totalCounter.innerText);
 totalCounter.innerText = convertedTotCounter;
 for (let i = 0; i < card.length; i++) {
   let taskCounter = document.getElementById("task-counter");
   taskCounter.innerText = card.length;
-  // console.log(convertedTotCounter);
 
   let btnComplete = document.getElementsByClassName("btn-complete")[i];
   btnComplete.addEventListener("click", function (event) {
-    // console.log(event.target.querySelector(".card"));
-
-    /* console.log(
-      event.target.parentNode.parentNode.parentNode.querySelector("h3")
-        .innerText
-    ); */
-
     let captureTitle =
       event.target.parentNode.parentNode.parentNode.querySelector(
         "h3"
@@ -44,11 +28,9 @@ for (let i = 0; i < card.length; i++) {
     p.innerHTML = `
     You have Complete The Task ${captureTitle} at ${logTime()}
     `;
-
     if (event.target.getAttribute("disabled") === "false") {
-      // taskCounter.innerText = convertedTaskCounter - 1;
       taskCounter.innerText -= 1;
-      // console.log(typeof taskCounter.innerText);
+
       convertedTotCounter += 1;
       totalCounter.innerText = convertedTotCounter;
       activityLogMessage.appendChild(p);
@@ -56,10 +38,7 @@ for (let i = 0; i < card.length; i++) {
       if (taskCounter.innerText === "0") {
         alert("Congratulations!!! You have completed all the current task");
       }
-      // console.log(convertedTotCounter);
     }
-    //   console.log(event.target.getAttribute("disabled") === "false");
-    //   console.log(typeof convertedTaskCounter);
   });
 }
 
@@ -100,3 +79,5 @@ document
     let hsla = `hsla(${h}, ${s}%, ${l}%, ${a})`;
     document.body.style.backgroundColor = hsla;
   });
+
+console.log(10 % 12);
